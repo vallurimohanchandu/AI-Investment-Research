@@ -1,0 +1,82 @@
+/**
+ * Global styles for the AI Investment Research Agent.
+ *
+ * Imported once in app/layout.tsx. Tailwind directives compile into
+ * base resets, component utilities, and generated utility classes.
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Smooth scrolling for in-page anchor navigation within long reports. */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Default body typography and background. */
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+  }
+
+  /* Consistent focus rings for keyboard accessibility. */
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand-500 ring-offset-2;
+  }
+}
+
+@layer components {
+  /* Reusable container — centers content with responsive horizontal padding. */
+  .container-app {
+    @apply mx-auto w-full max-w-5xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Primary action button used for "Research" submission. */
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg bg-brand-600 px-5 py-2.5
+      text-sm font-semibold text-white shadow-sm transition-colors
+      hover:bg-brand-700 focus-visible:ring-brand-500
+      disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  /* Secondary/outline button for less prominent actions. */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-lg border border-gray-300
+      bg-white px-5 py-2.5 text-sm font-semibold text-gray-700 shadow-sm
+      transition-colors hover:bg-gray-50 focus-visible:ring-brand-500
+      disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  /* Card surface for report sections. */
+  .card {
+    @apply rounded-xl border border-gray-200 bg-white p-6 shadow-card;
+  }
+
+  /* Form input styling for the company name search field. */
+  .input-field {
+    @apply w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm
+      text-gray-900 placeholder:text-gray-400 transition-colors
+      focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20;
+  }
+}
+
+@layer utilities {
+  /* Subtle gradient background for the page hero area. */
+  .bg-hero-gradient {
+    background: linear-gradient(
+      135deg,
+      theme("colors.brand.950") 0%,
+      theme("colors.brand.800") 50%,
+      theme("colors.brand.600") 100%
+    );
+  }
+
+  /* Truncate multi-line text with ellipsis (e.g. news summaries). */
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
