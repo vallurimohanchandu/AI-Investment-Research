@@ -4,7 +4,7 @@
 
 An AI-powered investment research agent that accepts a company name, researches it via real-time web search, analyzes the findings with Google Gemini through LangChain, and produces a structured investment report with a scored recommendation.
 
-> **Live Demo:** Not deployed yet. See [`docs/DEPLOY.md`](docs/DEPLOY.md) for Vercel deployment steps.
+> **Live Demo:** [https://ai-investment-research-delta.vercel.app/](https://ai-investment-research-delta.vercel.app/)
 
 ---
 
@@ -352,14 +352,8 @@ Tested on **July 6, 2026**. Full JSON outputs in [`docs/example-runs.json`](docs
 
 ---
 
-## Live Demo
-
-> **Status:** Not yet deployed. Follow [`docs/DEPLOY.md`](docs/DEPLOY.md) to deploy on Vercel.
-
-After deployment, add your URL here:
-```
-https://your-project.vercel.app
-```
+> **Status:** Live and working!  
+> **Link:** [https://ai-investment-research-delta.vercel.app/](https://ai-investment-research-delta.vercel.app/)
 
 ---
 
